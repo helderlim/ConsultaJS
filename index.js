@@ -1,10 +1,5 @@
-let contador = 0;
+let aluno = { nome: "Marcos", email: "marcos@email.com", idade: 25 };
 
-let meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
-
-do {
-
-    console.log(meses[contador]);
-    contador++;
-
-} while ( contador < meses.length );
+for ( let dados in aluno ) {
+    console.log(aluno[dados]);
+}
