@@ -1,21 +1,27 @@
-let numeros = [10, 5, 7, 8, 9, 6, 12, 4];
+let funcionarios = [
+    {id: 1, nome: "César", habilitado: false},
+    {id: 2, nome: "Jéssica", habilitado: false},
+    {id: 3, nome: "Renan", habilitado: true},
+    {id: 4, nome: "Marlon", habilitado: false},
+    {id: 5, nome: "Ana", habilitado: false}
+];
 
-let total_impares = 0;
-let total_pares = 0;
+let contador = 0;
+let encontrouHabilitado = false;
 
-contador = 0;
+while ( contador < funcionarios.length ) {
 
-while ( contador < numeros.length ) {
+    let funcionario = funcionarios[contador];
 
-    if( numeros[contador] % 2 == 0 ){
-        total_pares++;
-    } else {
-        total_impares++;
+    if( funcionario.habilitado == true ){
+        console.log("Funcionário habilitado encontrado: " + funcionario.nome);
+        encontrouHabilitado = true;
+        break;
     }
 
     contador++;
-
 }
 
-console.log(" O total de números ímpares é: " + total_impares);
-console.log(" O total de números pares é: " + total_pares);
+if (!encontrouHabilitado) {
+    console.log("Nenhum funcionário habilitado encontrado");
+}
