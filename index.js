@@ -1,14 +1,21 @@
-let clientes_array = [
-    {id: 1, nome: "Mônica", telefone: "99999-6565"},
-    {id: 2, nome: "Tânia", telefone: "99999-0778"},
-    {id: 3, nome: "Carlos", telefone: "99999-0551"}
-];
+let linguagem = "JavaScript";
+let stack = "mobile";
+let msg = "";
 
-for ( let cliente of clientes_array ) {
+switch (stack) {
+  case "back-end":
+    console.log(`Estude Node.js para programação ${ stack } em ${ linguagem }`);
+    break;
 
-    let nome = cliente.nome;
-    let telefone = cliente.telefone;
+  case "front-end":
+    console.log(`Estude React para programação ${ stack } em ${ linguagem }`);
+    break;
 
-    console.log("Nome: " + nome + " - Telefone: " + telefone);
+  case "mobile":
+    console.log(`Estude React Native para programação ${ stack } em ${ linguagem }`);
+    break;
 
+  default:
+    console.log(`Tecnologia indisponível para ${ stack }`);
+    break;
 }
