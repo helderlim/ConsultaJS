@@ -1,25 +1,29 @@
-var curiosidades_chuck_norris = [
-    { titulo: "Cuidados com a higiene bucal",           conteudo: "Chuck Norris usa arame farpado como fio dental."},
-    { titulo: "Fórmula para maratonar séries",          conteudo: "Chuck Norris pode assistir um episódio de 60 minutos em 22 segundos."},
-    { titulo: "Suicida que não morre",                  conteudo: "Chuck Norris foi homem-bomba 34 vezes."},
-    { titulo: "Olhos que tudo veem",                    conteudo: "Chuck Norris já viu o homem invisível."},
-    { titulo: "Manipulando o tempo",                    conteudo: "Chuck Norris não usa relógio. Ele decide que horas são."},
-    { titulo: "Praticando esportes radicais",           conteudo: "Chuck Norris faz bungee jump sem corda."},
-    { titulo: "Não vale chorar",                        conteudo: "Chuck Norris faz cebolas chorarem."},
-    { titulo: "Tempero de fogo",                        conteudo: "Chuck Norris usa pólvora como tempero."},
-    { titulo: "Extinção dos dinossauros",               conteudo: "Chuck Norris encarou os dinossauros uma vez, apenas uma."},
-    { titulo: "Contando sem parar",                     conteudo: "Chuck Norris contou até o infinito. Duas vezes."}
+let cursos_idiomas = [
+    { nome: "Inglês", preco: 2500, carga_horaria: 160 },
+    { nome: "Espanhol", preco: 1500, carga_horaria: 110 },
+    { nome: "Francês", preco: 3600, carga_horaria: 200 },
+    { nome: "Chinês", preco: 5500, carga_horaria: 400 },
+    { nome: "Alemão", preco: 3800, carga_horaria: 230 }
 ];
 
-var tamanho_colecao = curiosidades_chuck_norris.length;
+for ( let curso of cursos_idiomas ) {
 
-var numero_sorteado = Math.floor(Math.random() * tamanho_colecao);
+    let nome_curso = curso.nome;
+    let preco_curso = curso.preco;
+    let carga_horaria_curso = curso.carga_horaria;
 
-var curiosidade_escolhida = curiosidades_chuck_norris[numero_sorteado];
+    let preco_hora_curso = preco_curso / carga_horaria_curso;
 
-var titulo_curiosidade = curiosidade_escolhida.titulo;
-var conteudo_curiosidade = curiosidade_escolhida.conteudo;
+    console.log("Nome do curso: " + nome_curso);
+    console.log("Carga horária do curso: " + carga_horaria_curso + " horas");
+    console.log("Preço do curso: R$" + preco_curso + ",00");
 
-console.log("CURIOSIDADE SOBRE CHUCK NORRIS");
-console.log("Título: " + titulo_curiosidade);
-console.log("Conteúdo: " + conteudo_curiosidade);
+    if ( preco_hora_curso >= 15) {
+        console.log("Hora/aula superior ou igual a R$15,00");
+    } else {
+        console.log("Hora/aula inferior a R$15,00");
+    }
+
+    console.log("\n");
+
+}
