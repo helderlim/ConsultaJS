@@ -1,26 +1,44 @@
-let meteoros_trimestre_um     =  "Alfa Centaurideos começa em 03/01 e termina em 05/01\nGama Normídeos começa em 17/02 e termina em 20/02\nPi Pupídeos começa em 25/03 e termina em 29/03";
-
-let meteoros_trimestre_dois   =  "Líridas começa em 23/05 e termina em 26/05\nEta Aquáridas começa em 31/05 e termina em 02/06\nBootídeos de Junho começa em 16/06 e termina em 20/06";
-
-let meteoros_trimestre_tres   =  "Eta Líridas começa em 19/08 e termina em 22/08\nAlfa Capricornídeos começa em 13/09 e termina em 17/09";
-
-let meteoros_trimestre_quatro =  "Delta Aquáridas do Sul começa em 11/10 e termina em 15/10\nPiscis Austrinídeos começa em 04/12 e termina em 08/12\nPerseidas começa em 27/12 e termina em 31/12";
+var frases_do_dia = [
+    "Sorte é o resultado de muito esforço, trabalho e dedicação",
+    "Imagine uma nova história para sua vida e acredite nela",
+    "Pedras no caminho? Eu guardo todas. Um dia vou construir um castelo",
+    "Se existe uma forma de fazer melhor, descubra-a",
+    "Seja a mudança que você deseja ver no mundo.",
+    "Um objetivo nada mais é do que um sonho com limite de tempo",
+    "Você precisa fazer aquilo que pensa que não é capaz de fazer",
+    "A persistência é o caminho do êxito.",
+    "Concentre-se naquilo que você é bom, delegue todo o resto",
+    "A amizade duplica as alegrias e divide as tristezas",
+    "O que quer que você lute, você fortalece, e o que você resiste, persiste",
+    "Lembre-se: sua verdadeira força, vem de dentro",
+    "Nada acontece a menos que sonhemos antes",
+    "Para quem ama, qualquer sacrifício é alegria",
+    "A paz é a única forma de nos sentirmos realmente humanos",
+    "Não existe um caminho para a felicidade. A felicidade é o caminho",
+    "O amor é a alegria acompanhada da ideia de uma causa exterior",
+    "A criatividade é ilimitada, pois a arte só precisa de motivação",
+    "Fé, duas letras que podem mudar sua vida, acredite",
+    "Que a vontade de vencer seja minha maior motivação",
+    "Nunca subestime o poder de sua visão para mudar o seu mundo",
+    "Não coloque limites em seus sonhos. Coloque fé",
+    "Tenho certeza de que se eu sorrisse menos teria menos amigos",
+    "Não espere por uma crise para descobrir o que é importante em sua vida",
+    "Quem sorri sem parar não é alegre, é falso",
+    "A alegria de fazer o bem é a única felicidade verdadeira",
+    "A alegria evita mil males e prolonga a vida",
+    "Coloque fé onde falta coragem",
+    "Levanta, sacode a poeira e dá a volta por cima",
+    "O que vale a pena possuir, vale a pena esperar",
+    "A esperança é o sonho do homem acordado"
+];
 
 var data_atual = new Date();
-var mes_atual = data_atual.getMonth();
+var numero_escolhido = data_atual.getDate();
 
-if(mes_atual == 0 || mes_atual == 1 || mes_atual == 2) {
-    console.log("As chuvas de meteoros do primeiro trimestre são:\n\n"+meteoros_trimestre_um);
-}
-else if(mes_atual == 3 || mes_atual == 4 || mes_atual == 5) {
-    console.log("As chuvas de meteoros do segundo trimestre são:\n\n"+meteoros_trimestre_dois);
-}
-else if(mes_atual == 6 || mes_atual == 7 || mes_atual == 8) {
-    console.log("As chuvas de meteoros do terceiro trimestre são:\n\n"+meteoros_trimestre_tres);
-}
-else if(mes_atual == 9 || mes_atual == 10 || mes_atual == 11) {
-    console.log("As chuvas de meteoros do quarto trimestre são:\n\n"+meteoros_trimestre_quatro);
-}
-else {
-    console.log("Nenhuma chuva de meteoro no período informado");
-}
+console.log("Número sorteado: " + numero_escolhido);
+numero_escolhido--;
+
+var frase_do_dia = frases_do_dia[numero_escolhido];
+
+console.log("Frase do dia");
+console.log("Mensagem: " + frase_do_dia);
