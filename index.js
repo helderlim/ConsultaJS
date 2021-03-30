@@ -1,5 +1,4 @@
-let nome = "   Diego     ";
+let label = "Email: ";
+let email = "contato@email.com";
 
-let resultado = nome.trim();
-
-console.log(resultado);
+console.log( label.padEnd(20, ' ') + email );
