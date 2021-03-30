@@ -1,14 +1,21 @@
-let numero = 3;
-let contador = 0;
+let numeros = [10, 5, 7, 8, 9, 6, 12, 4];
 
-console.log("Tabuada de multiplicação - Nº " + numero);
+let total_impares = 0;
+let total_pares = 0;
 
-while ( contador <= 10 ) {
+contador = 0;
 
-    let resultado = numero * contador;
+while ( contador < numeros.length ) {
 
-    console.log( numero + " x " + contador + " = " + resultado );
+    if( numeros[contador] % 2 == 0 ){
+        total_pares++;
+    } else {
+        total_impares++;
+    }
 
     contador++;
 
 }
+
+console.log(" O total de números ímpares é: " + total_impares);
+console.log(" O total de números pares é: " + total_pares);
