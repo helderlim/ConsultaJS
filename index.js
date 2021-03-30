@@ -1,6 +1,5 @@
-let programador_1 = "Flávia";
-let programador_2 = "Rogério";
+let nome = "   Diego     ";
 
-console.log(programador_1.toUpperCase()); // FLÁVIA
+let resultado = nome.trim();
 
-console.log(programador_2.toLowerCase()); // rogéri
+console.log(resultado);
