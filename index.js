@@ -1,21 +1,7 @@
-let linguagem = "JavaScript";
-let stack = "mobile";
-let msg = "";
+let cep = "23010-090";
 
-switch (stack) {
-  case "back-end":
-    console.log(`Estude Node.js para programação ${ stack } em ${ linguagem }`);
-    break;
+if ( cep.length != 9 ){
 
-  case "front-end":
-    console.log(`Estude React para programação ${ stack } em ${ linguagem }`);
-    break;
+    console.log("O CEP deve ter 9 caracteres");
 
-  case "mobile":
-    console.log(`Estude React Native para programação ${ stack } em ${ linguagem }`);
-    break;
-
-  default:
-    console.log(`Tecnologia indisponível para ${ stack }`);
-    break;
 }
