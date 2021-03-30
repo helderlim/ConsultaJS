@@ -1,23 +1,14 @@
-let carro = { nome: "Argo", marca: "Fiat", preco: 50000, ano: 2020 };
+let clientes_array = [
+    {id: 1, nome: "Mônica", telefone: "99999-6565"},
+    {id: 2, nome: "Tânia", telefone: "99999-0778"},
+    {id: 3, nome: "Carlos", telefone: "99999-0551"}
+];
 
-let percentual_desconto = 5;
+for ( let cliente of clientes_array ) {
 
-for ( let propriedade in carro ) {
+    let nome = cliente.nome;
+    let telefone = cliente.telefone;
 
-    if ( propriedade == "preco" ) {
-
-        let preco = propriedade;
-
-        let desconto = ( carro[preco] * percentual_desconto ) / 100;
-
-        let novo_preco = carro[preco] - desconto;
-
-        console.log("novo preço: R$" + novo_preco + ",00");
-
-    } else {
-
-        console.log(propriedade + ": " + carro[propriedade]);
-
-    }
+    console.log("Nome: " + nome + " - Telefone: " + telefone);
 
 }
