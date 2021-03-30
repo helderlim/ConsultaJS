@@ -1,7 +1,6 @@
-let cep = "23010-090";
+let programador_1 = "Flávia";
+let programador_2 = "Rogério";
 
-if ( cep.length != 9 ){
+console.log(programador_1.toUpperCase()); // FLÁVIA
 
-    console.log("O CEP deve ter 9 caracteres");
-
-}
+console.log(programador_2.toLowerCase()); // rogéri
