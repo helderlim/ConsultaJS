@@ -1,44 +1,25 @@
-var frases_do_dia = [
-    "Sorte é o resultado de muito esforço, trabalho e dedicação",
-    "Imagine uma nova história para sua vida e acredite nela",
-    "Pedras no caminho? Eu guardo todas. Um dia vou construir um castelo",
-    "Se existe uma forma de fazer melhor, descubra-a",
-    "Seja a mudança que você deseja ver no mundo.",
-    "Um objetivo nada mais é do que um sonho com limite de tempo",
-    "Você precisa fazer aquilo que pensa que não é capaz de fazer",
-    "A persistência é o caminho do êxito.",
-    "Concentre-se naquilo que você é bom, delegue todo o resto",
-    "A amizade duplica as alegrias e divide as tristezas",
-    "O que quer que você lute, você fortalece, e o que você resiste, persiste",
-    "Lembre-se: sua verdadeira força, vem de dentro",
-    "Nada acontece a menos que sonhemos antes",
-    "Para quem ama, qualquer sacrifício é alegria",
-    "A paz é a única forma de nos sentirmos realmente humanos",
-    "Não existe um caminho para a felicidade. A felicidade é o caminho",
-    "O amor é a alegria acompanhada da ideia de uma causa exterior",
-    "A criatividade é ilimitada, pois a arte só precisa de motivação",
-    "Fé, duas letras que podem mudar sua vida, acredite",
-    "Que a vontade de vencer seja minha maior motivação",
-    "Nunca subestime o poder de sua visão para mudar o seu mundo",
-    "Não coloque limites em seus sonhos. Coloque fé",
-    "Tenho certeza de que se eu sorrisse menos teria menos amigos",
-    "Não espere por uma crise para descobrir o que é importante em sua vida",
-    "Quem sorri sem parar não é alegre, é falso",
-    "A alegria de fazer o bem é a única felicidade verdadeira",
-    "A alegria evita mil males e prolonga a vida",
-    "Coloque fé onde falta coragem",
-    "Levanta, sacode a poeira e dá a volta por cima",
-    "O que vale a pena possuir, vale a pena esperar",
-    "A esperança é o sonho do homem acordado"
+var curiosidades_chuck_norris = [
+    { titulo: "Cuidados com a higiene bucal",           conteudo: "Chuck Norris usa arame farpado como fio dental."},
+    { titulo: "Fórmula para maratonar séries",          conteudo: "Chuck Norris pode assistir um episódio de 60 minutos em 22 segundos."},
+    { titulo: "Suicida que não morre",                  conteudo: "Chuck Norris foi homem-bomba 34 vezes."},
+    { titulo: "Olhos que tudo veem",                    conteudo: "Chuck Norris já viu o homem invisível."},
+    { titulo: "Manipulando o tempo",                    conteudo: "Chuck Norris não usa relógio. Ele decide que horas são."},
+    { titulo: "Praticando esportes radicais",           conteudo: "Chuck Norris faz bungee jump sem corda."},
+    { titulo: "Não vale chorar",                        conteudo: "Chuck Norris faz cebolas chorarem."},
+    { titulo: "Tempero de fogo",                        conteudo: "Chuck Norris usa pólvora como tempero."},
+    { titulo: "Extinção dos dinossauros",               conteudo: "Chuck Norris encarou os dinossauros uma vez, apenas uma."},
+    { titulo: "Contando sem parar",                     conteudo: "Chuck Norris contou até o infinito. Duas vezes."}
 ];
 
-var data_atual = new Date();
-var numero_escolhido = data_atual.getDate();
+var tamanho_colecao = curiosidades_chuck_norris.length;
 
-console.log("Número sorteado: " + numero_escolhido);
-numero_escolhido--;
+var numero_sorteado = Math.floor(Math.random() * tamanho_colecao);
 
-var frase_do_dia = frases_do_dia[numero_escolhido];
+var curiosidade_escolhida = curiosidades_chuck_norris[numero_sorteado];
 
-console.log("Frase do dia");
-console.log("Mensagem: " + frase_do_dia);
+var titulo_curiosidade = curiosidade_escolhida.titulo;
+var conteudo_curiosidade = curiosidade_escolhida.conteudo;
+
+console.log("CURIOSIDADE SOBRE CHUCK NORRIS");
+console.log("Título: " + titulo_curiosidade);
+console.log("Conteúdo: " + conteudo_curiosidade);
