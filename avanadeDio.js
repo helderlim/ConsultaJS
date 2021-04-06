@@ -1,15 +1,21 @@
-const myNumber = 12.4832
+let user = {
+    name: 'helder'
+};
 
-//transforma numero para string 
-const numberAsString = myNumber.toString();
-console.log('Numero transformando em string: ', typeof numberAsString);
+//Alterando  a propriedade de um objeto 
+user.name =' outro nome 1';
+user['name'] =' outro nome 2'
+console.log(user.name);
 
-//retorna numero com um numero de casas decimais 
-const fixedTwoDecimals = myNumber.toFixed(2);
-console.log('\nNumero com duas casas decimais ', fixedTwoDecimals);
+const prop = 'name';
+user[prop] = 'outro nome 3';
+console.log(user.name);
 
-// Transforma uma string em float 
-console.log('\n String parseada para float: ', parseFloat('13.99'));
 
-// Transforma uma string em int
-console.log('\n String  parseada para int: ', parseInt('13.90'));
+//criando uma propriedade 
+user.lastName = 'lima '
+console.log(user);
+
+//deletando uma propriedade 
+delete user.name; 
+console.log(user.name);
