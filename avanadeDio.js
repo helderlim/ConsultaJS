@@ -1,21 +1,36 @@
-let user = {
-    name: 'helder'
-};
+const user ={
+    name: 'helder',
+    lasName: 'lima'
+}
 
-//Alterando  a propriedade de um objeto 
-user.name =' outro nome 1';
-user['name'] =' outro nome 2'
-console.log(user.name);
+// Recuperar as chaves do objeto 
+console.log('propriedades do objeto user: ', Object.keys(user));
 
-const prop = 'name';
-user[prop] = 'outro nome 3';
-console.log(user.name);
+// recupera valores das chaves do objeto 
+console.log('\n valores das propriedades do objeto user: ', Object.values(user));
 
+// Mergear propriedades de objetos 
+Object.assign(user, {fullName: 'helder lima '});
 
-//criando uma propriedade 
-user.lastName = 'lima '
-console.log(user);
+console.log('\n adiciona a propriedade fullname no objeto user; ', user);
+console.log('\n retorna um novo objeto mergeando dois ou mais objetos ', Object.assign({}, user, {age: 26}));
 
-//deletando uma propriedade 
-delete user.name; 
-console.log(user.name);
+//previne todas as alterações em um objeto 
+const newObj = { foo: 'bar'}
+Object.freeze(newObj);
+
+newObj.foo = 'changes '
+delete newObj.foo;
+newObj.bar = 'foo';
+
+console.log('\n Variavel newObj apos as alteraçoes: ', newObj);
+
+// permite apenas a alteraação de propriedades existentes em um objeto 
+const person = { name: 'helder'}
+Object.seal(person);
+
+person.nome = 'helder lima ';
+delete person.name;
+person.age = 26;
+
+console.log('\n variavel  person apos as alterações ', person);
